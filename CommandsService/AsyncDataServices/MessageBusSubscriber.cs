@@ -66,7 +66,7 @@ namespace CommandsService.AsyncDataServices
             return Task.CompletedTask;
         }
 
-        private void RabbitMQ_ConnectionShitdown(object sender, ShutdownEventArgs e)
+        private void RabbitMQ_ConnectionShutdown(object sender, ShutdownEventArgs e)
         {
             Console.WriteLine("--> Connection Shutdown");
         }

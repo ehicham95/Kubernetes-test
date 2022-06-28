@@ -45,7 +45,7 @@ namespace PlatformService
             {
                 Console.WriteLine("--> Using InMem Db");
                 services.AddDbContext<AppDbContext>(opt =>
-                     opt.UseInMemoryDatabase("InMem"));
+                     opt.UseSqlServer(Configuration.GetConnectionString("PlatformsConn")));
             }
 
             services.AddScoped<IPlatformRepo, PlatformRepo>();
